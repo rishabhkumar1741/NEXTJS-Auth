@@ -3,7 +3,7 @@ import User from "@/models/userModel";
 import { NextRequest,NextResponse } from "next/server";
 import bcryptjs from 'bcryptjs';
 import { error } from "console";
-import { useRouter } from "next/navigation";
+
 
 
 connect()

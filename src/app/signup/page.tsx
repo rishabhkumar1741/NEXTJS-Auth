@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { axios } from "axios";
+import axios  from "axios";
 import Link from "next/link";
 
 export default function signup() {
+    const router = useRouter();
     const [user, setuser] = useState({
         username: "",
         email: "",
