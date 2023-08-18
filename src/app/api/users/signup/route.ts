@@ -2,15 +2,21 @@ import connect from "@/dbconfig/dbconfig";
 import User from "@/models/userModel";
 import { NextRequest,NextResponse } from "next/server";
 import bcryptjs from 'bcryptjs';
-import { error } from "console";
+
 
 
 
 connect()
+console.log("server is ruuning");
+
 
 export async function POST(resquest:NextRequest)
 {
+    console.log("rishabh");
+    
     try {
+        console.log("kumar");
+        
         const reqBody = await resquest.json();
         const {email,username,password}=reqBody;
         console.log(reqBody);
@@ -45,6 +51,8 @@ export async function POST(resquest:NextRequest)
         }
         
     } catch (error:any) {
+        console.log("servering");
+        
         console.log(error);
        return NextResponse.json({erroe:error.message},{status:500})
     }
